@@ -1,0 +1,5 @@
+FROM bellsoft/liberica-openjdk-alpine:16.0.1
+COPY ./java ./src
+RUN mkdir ./out
+RUN javac -sourcepath ./src -d out src/ru/julie/hw1/sample/Main.java
+CMD java -classpath ./out ru.julie.hw1.sample.Main
